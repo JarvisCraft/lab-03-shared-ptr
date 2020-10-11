@@ -40,7 +40,7 @@ target_include_directories(shared_pointer
 target_include_directories(tests
         PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include
         )
-target_link_libraries(tests PUBLIC GTest::gtest_main shared_pointer)
+target_link_libraries(tests PRIVATE GTest::gtest_main shared_pointer)
 
 enable_testing()
 add_test(NAME unit_tests COMMAND tests)
